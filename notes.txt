@@ -1,0 +1,8 @@
+sudo npm install -g jest
+
+cd to exercises
+
+jest (runs all tests)
+
+jest fib/test.js --watch
+jest fib --watch
