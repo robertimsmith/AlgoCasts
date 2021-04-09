@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/exercises/reverseint/index.js"
+            "program": "${workspaceFolder}/exercises/fizzbuzz/index.js"
         }
     ]
 }
