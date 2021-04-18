@@ -79,16 +79,55 @@ class LinkedList {
         previous.next = null;
     }
 
+    reverseList(){
+        if(!this.head){
+            return;
+        }
+
+        let node = this.head;
+        while(node){
+            console.log(node.data);
+            node = node.next;   
+        }
+        console.log("-----"); 
+
+        let next = null;
+        let prev = null;
+
+        node = this.head;
+        while(node){
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+        this.head = prev;
+
+
+
+        node = this.head;
+        while(node){
+            console.log(node.data);
+            node = node.next;   
+        }
+    }
+
+
     insertLast(data){
-        
+
     }
 
 }
 
 const list = new LinkedList();
-list.insertFirst('a');
+list.insertFirst('d');
+list.insertFirst('c');
+//list.insertLast('c');
+//list.getLast(); // returns node with data 'C'
+
+
 list.insertFirst('b');
-list.insertLast('c');
-list.getLast(); // returns node with data 'C'
+list.insertFirst('a');
+list.reverseList();
 
 module.exports = { Node, LinkedList };

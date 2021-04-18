@@ -18,3 +18,29 @@ cont (c)
 repl to see variables
 
 
+
+to reverse a linked list:
+10 -> 20 -> 30 -> 40 -> 50
+
+head = 10
+10.next = 20
+20.next = 30
+30.next = 40
+40.next = 50
+50.next = null
+prev = null;
+node = head;
+
+while (node){
+    next = node.next;
+    node.next = prev;
+    prev = node;
+    node = next;
+}
+head = prev;
+
+recursive:
+divide the list in 2 parts, first node and rest of linked list
+call reverse for the rest of the linked list
+link rest to first
+fix the head
