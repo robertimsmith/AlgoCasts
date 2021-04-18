@@ -16,10 +16,10 @@ function fizzBuzz(n) {
     for(i = 1; i <= n; i++){
         answer = '';
         if (!(i % 3)){
-            answer += 'fizz'
+            answer += 'fizz';
         }
         if (!(i % 5)){
-            answer += 'buzz'
+            answer += 'buzz';
         }
         if (answer === ''){
             answer = i;
@@ -29,5 +29,5 @@ function fizzBuzz(n) {
 }
 
 
-//fizzBuzz(20);
+fizzBuzz(20);
 module.exports = fizzBuzz;

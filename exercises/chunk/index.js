@@ -8,6 +8,20 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {}
+
+function chunk(array, size) {
+    const finalArray = [];   
+    for (i = 0; i < array.length; i = i + size){      
+        finalArray.push(array.slice(i,i+size));
+    }
+    
+    return finalArray;
+}
 
 module.exports = chunk;
+
+const testArray = [1, 2, 3, 4, 5];
+const testSize = 2;
+
+console.log("Response = " + chunk(testArray, testSize));
+
