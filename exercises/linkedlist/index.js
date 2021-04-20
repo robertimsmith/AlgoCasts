@@ -85,12 +85,6 @@ class LinkedList {
         }
 
         let node = this.head;
-        while(node){
-            console.log(node.data);
-            node = node.next;   
-        }
-        console.log("-----"); 
-
         let next = null;
         let prev = null;
 
@@ -102,8 +96,6 @@ class LinkedList {
             node = next;
         }
         this.head = prev;
-
-
 
         node = this.head;
         while(node){
@@ -120,14 +112,9 @@ class LinkedList {
 }
 
 const list = new LinkedList();
-list.insertFirst('d');
-list.insertFirst('c');
-//list.insertLast('c');
-//list.getLast(); // returns node with data 'C'
-
-
-list.insertFirst('b');
 list.insertFirst('a');
-list.reverseList();
+list.insertFirst('b');
+list.insertLast('c');
+list.getLast(); // returns node with data 'C'
 
 module.exports = { Node, LinkedList };
